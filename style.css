@@ -614,7 +614,7 @@
 }
 .footer .footer-links ul li:before {
   content: " ";
-  background-image: url(/images/angle-double-right-solid.svg);
+  background-image: url(images/angle-double-right-solid.svg);
   width: 9%;
   height: 10px;
   display: inline-block;
