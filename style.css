@@ -1,3 +1,8 @@
+:root {
+  --robotoFont: "Roboto", sans-serif;
+  --titilliumFont: "Titillium Web", sans-serif;
+  --alexFont: "Alex Brush", "cursive";
+}
 /* Reset values  */
 * {
   margin: 0;
@@ -17,7 +22,7 @@
   border: none;
   outline: none;
   padding-left: 10px;
-  box-shadow: 0 0 15px -11px;
+  /* box-shadow: 0 0 15px -11px; */
   border-radius: 20px;
   padding: 8px;
 }
@@ -29,6 +34,7 @@
   text-transform: uppercase;
   transition: 0.3s;
   cursor: pointer;
+  transform: translateX(-50%);
 }
 .header .upper-header div:nth-of-type(2) h2:hover {
   color: #abe2c5;
@@ -76,7 +82,7 @@
   font-size: 12px;
 }
 .header .upper-header div:nth-of-type(3) i {
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px;
   cursor: pointer;
   position: relative;
@@ -85,17 +91,21 @@
 .header .upper-header div:nth-of-type(3) i:hover {
   color: #abe2c5;
 }
+.header .lower-header {
+  padding-block: 15px;
+}
 .header .lower-header ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-family: "Concert One", "cursive";
-  font-size: 20px;
+  font-family: var(--robotoFont);
+  font-size: 1.2vw;
+  margin-bottom: 0;
 }
 .header .lower-header ul li {
-  margin: 0 15px 15px;
+  margin-right: 15px;
   text-transform: capitalize;
   cursor: pointer;
   border-bottom: 2px solid transparent;
@@ -106,6 +116,9 @@
   border-bottom: 2px solid #abe2c5;
 }
 @media (max-width: 768px) {
+  .header .upper-header div:nth-of-type(2) h2 {
+    transform: translateX(0%);
+  }
   .upper-header {
     justify-content: unset;
   }
@@ -186,12 +199,13 @@
   max-height: 400px;
 }
 .inner-banner div:nth-of-type(1) h3 {
-  font-family: "Paprika", "cursive";
+  font-family: var(--robotoFont);
   text-transform: uppercase;
-  font-size: 2vw;
+  font-size: 1.7vw;
+  letter-spacing: 2px;
 }
 .inner-banner div:nth-of-type(1) h3 span {
-  font-family: "Satisfy", "cursive";
+  font-family: var(--alexFont);
   font-size: 3vw;
 }
 .inner-banner div:nth-of-type(1) h2 {
@@ -200,8 +214,8 @@
   font-size: 3vw;
 }
 .inner-banner div:nth-of-type(1) h2 sup {
-  font-family: "Paprika", "cursive";
-  font-size: 2vw;
+  font-family: var(--robotoFont);
+  font-size: 1.6vw;
 }
 .inner-banner div:nth-of-type(1) h4 {
   margin-top: 25px;
@@ -209,7 +223,7 @@
 .inner-banner div:nth-of-type(1) h4 a {
   font-family: "Merienda", "cursive";
   text-transform: uppercase;
-  font-size: 2vw;
+  font-size: 1.2vw;
   color: black;
 }
 .inner-banner div:nth-child(2) img {
@@ -253,9 +267,10 @@
 }
 .gallary .gallary-menu ul li {
   cursor: pointer;
-  font-family: "Baloo 2", cursive;
+  font-family: var(--robotoFont);
   border-bottom: 2px solid transparent;
   transition: 0.3s;
+  font-size: 1.1vw;
 }
 .gallary .gallary-menu ul li:hover {
   color: #abe2c5;
@@ -268,7 +283,7 @@
   border: none;
   outline: none;
   padding-left: 10px;
-  box-shadow: 0 0 15px -11px;
+  /* box-shadow: 0 0 15px -11px; */
   border-radius: 20px;
   padding: 8px;
 }
@@ -298,7 +313,7 @@
 }
 .products .upper-item .product-behavior i {
   color: black;
-  font-size: 1.8vw;
+  font-size: 19px;
   margin-top: 20px;
   cursor: pointer;
   transition: 0.3s;
@@ -319,19 +334,19 @@
   border-bottom: 1px solid beige;
 }
 .products .lower-item h2 {
-  font-family: "Merienda", "cursive";
-  font-size: 2vw;
+  font-family: var(--robotoFont);
+  font-size: 1.5vw;
 }
 .products .lower-item span:nth-of-type(1) {
   text-decoration: line-through;
-  font-family: "Paprika", "cursive";
-  font-size: 1.1vw;
+  font-family: var(--robotoFont);
+  font-size: 1vw;
   font-weight: bold;
 }
 .products .lower-item span:nth-of-type(2) {
   color: #abe2c5;
-  font-family: "Paprika", "cursive";
-  font-size: 1.1vw;
+  font-family: var(--robotoFont);
+  font-size: 1vw;
   font-weight: bold;
   margin-left: 10px;
 }
@@ -339,14 +354,24 @@
   padding: 25px 0 25px 75px;
 }
 .products .item-basket span {
-  font-family: "Paprika", "cursive";
+  font-family: var(--titilliumFont);
   text-transform: uppercase;
   font-size: 1vw;
   margin-left: 10px;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
+}
+.products .item-basket span:hover {
+  color: #abe2c5;
 }
 .products .item-basket i {
-  font-size: 1.4vw;
+  font-size: 19px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.products .item-basket i:hover {
+  color: #abe2c5;
 }
 @media (max-width: 992px) {
   .products .upper-item img {
@@ -381,17 +406,6 @@
 .featues-content {
   display: flex;
 }
-.dotted-image {
-  position: relative;
-  height: 100%;
-}
-.dotted-image img {
-  position: absolute;
-  width: 110%;
-  height: 80%;
-  left: -10px;
-  top: 45px;
-}
 .right-features {
   background-color: #90d0b6;
   width: 100%;
@@ -399,55 +413,69 @@
   padding: 20px 0 20px 20px;
   position: relative;
 }
+.right-features::before {
+  content: "";
+  background-image: url(/images/dotted.png);
+  width: 11%;
+  height: 90%;
+  position: absolute;
+  left: -12%;
+}
+.right-features::after {
+  content: "Wood Stand";
+  position: absolute;
+  left: -32%;
+  top: 43%;
+  transform: rotate(270deg);
+  letter-spacing: 2vw;
+  font-size: 1.4vw;
+}
 .right-features h2 {
-  font-size: 8vw;
-  letter-spacing: 12px;
+  font-size: 11vw;
+  letter-spacing: 11px;
   color: rgb(65 70 75 / 7%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: fit-content;
   margin-bottom: 0;
 }
-.right-features .wave-image {
-  position: relative;
-  width: 90%;
-  height: 100%;
-}
 .right-features img {
   width: 100%;
-  max-width: 74%;
-  max-height: 60%;
+  max-width: 70%;
+  max-height: 65%;
   position: absolute;
-  top: 22%;
-  left: 25%;
+  top: 25%;
+  left: 30%;
   background-size: cover;
 }
 .right-features h4 {
   color: white;
-  font-size: 2vw;
-  font-family: "Merienda", "cursive";
+  font-size: 1.3vw;
+  font-family: var(--robotoFont);
   width: fit-content;
 }
 .right-features h3 {
-  font-size: 2vw;
+  font-size: 1.4vw;
   font-family: "Paprika", "cursive";
   background-color: #8ed1b7;
   position: relative;
   width: fit-content;
   padding: 5px 5px 5px 0;
+  text-transform: capitalize;
 }
 .right-features p {
   color: white;
   background-color: #8ed1b7;
-  font-family: "Kalam", "cursive";
+  font-family: var(--robotoFont);
   width: 70%;
   position: relative;
   margin-block: 35px;
-  font-size: 1.3vw;
+  font-size: 1vw;
 }
 .right-features span a {
   font-family: "Merienda", "cursive";
   text-transform: uppercase;
   color: white;
+  font-size: 1vw;
 }
 .features .left-features {
   height: 60vh;
@@ -489,13 +517,25 @@
   font-weight: bold;
 }
 @media (max-width: 992px) {
-  .left-features  {
+  .left-features {
     width: 50%;
     margin: 0 auto;
   }
+  .right-features::before {
+    left: -11%;
+  }
+  .right-features::after {
+    left: -17%;
+  }
+  .right-features img {
+    max-width: 80%;
+    top: 30%;
+    left: 17%;
+  }
 }
 @media (max-width: 768px) {
-  .right-features img {
+  .right-features::after {
+    left: -18%;
   }
 }
 /* End Features */
@@ -508,18 +548,21 @@
   padding-top: 10px;
 }
 .services .service-item img {
-  height: 100px;
+  height: 90px;
+  width: 30%;
+  margin-bottom: 20px;
 }
 .services .service-item h2 {
-  font-family: "Paprika", cursive;
-  font-size: 20px;
+  font-family: var(--robotoFont);
+  font-size: 1.3vw;
   text-transform: uppercase;
   margin-top: 10px;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 .services .service-item h4 {
-  font-family: "Paprika", cursive;
-  font-size: 12px;
+  font-family: var(--titilliumFont);
+  font-size: 1.1vw;
   text-transform: capitalize;
 }
 .services .service-item1,
@@ -574,9 +617,10 @@
   transition: 0.3s;
 }
 .footer .left-footer h4 {
-  font-family: "Comfortaa", cursive;
-  margin-block: 50px;
-  font-size: 1.5vw;
+  font-family: var(--robotoFont);
+  margin-block: 30px;
+  font-size: 1.2vw;
+  line-height: 1.7;
 }
 .footer .left-footer {
   margin-top: 30px;
@@ -584,7 +628,7 @@
 .footer .left-footer a {
   text-decoration: none;
   font-family: "Comfortaa", cursive;
-  font-size: 1.3vw;
+  font-size: 1vw;
   transition: 0.3s;
 }
 .footer .left-footer a:hover {
@@ -594,7 +638,7 @@
   margin-left: 5px;
 }
 .footer .footer-links h2 {
-  font-family: "Baloo 2", cursive;
+  font-family: var(--robotoFont);
   font-size: 23px;
   padding: 0 0 15px 25px;
 }
@@ -615,7 +659,7 @@
 }
 .footer .footer-links ul li:before {
   content: " ";
-  background-image: url(images/angle-double-right-solid.svg);
+  background-image: url(/images/angle-double-right-solid.svg);
   width: 9%;
   height: 10px;
   display: inline-block;
@@ -655,7 +699,7 @@
     margin-block: 40px;
   }
   .footer .right-footer {
-    width: 75%;
+    width: 65%;
     margin: 20px auto 0;
     text-align: center;
   }
@@ -674,6 +718,12 @@
 /* End Footer  */
 
 /* Start Footer Copyright */
+.copyright span {
+  font-size: 1.2vw;
+}
+.copyright .row {
+  justify-content: space-between;
+}
 .copyright .left-copyright {
   display: flex;
   flex-direction: column;
@@ -682,18 +732,23 @@
   margin-bottom: 20px;
 }
 .copyright .right-copyright {
-  float: right;
   display: flex;
   flex-direction: column;
 }
-.copyright .right-copyright img {
+.copyright .right-copyright span {
+  display: flex;
+  justify-content: end;
+}
+.copyright .right-copyright .payment-methods {
+  display: flex;
+}
+.payment-methods img {
   width: 100%;
   height: auto;
 }
-@media (min-width: 992px) {
-  .copyright .right-copyright img {
-    width: 300px;
-    height: auto;
+@media (max-width: 992px) {
+  .copyright .right-copyright {
+    width: 60%;
   }
 }
 @media (max-width: 768px) {
@@ -702,6 +757,12 @@
   }
   .copyright .right-copyright {
     margin-top: 40px;
+    margin-inline: auto;
+    width: 40%;
+  }
+  .copyright .right-copyright span {
+    justify-content: center;
+    margin-bottom: 5px;
   }
 }
 /* End Footer Copyright */
