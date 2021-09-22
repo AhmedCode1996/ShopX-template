@@ -201,7 +201,7 @@
 .inner-banner div:nth-of-type(1) h3 {
   font-family: var(--robotoFont);
   text-transform: uppercase;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   letter-spacing: 2px;
 }
 .inner-banner div:nth-of-type(1) h3 span {
@@ -211,11 +211,11 @@
 .inner-banner div:nth-of-type(1) h2 {
   font-family: "Comfortaa", "cursive";
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 2.4vw;
 }
 .inner-banner div:nth-of-type(1) h2 sup {
   font-family: var(--robotoFont);
-  font-size: 1.6vw;
+  font-size: 1.2vw;
 }
 .inner-banner div:nth-of-type(1) h4 {
   margin-top: 25px;
@@ -223,7 +223,7 @@
 .inner-banner div:nth-of-type(1) h4 a {
   font-family: "Merienda", "cursive";
   text-transform: uppercase;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   color: black;
 }
 .inner-banner div:nth-child(2) img {
@@ -415,7 +415,7 @@
 }
 .right-features::before {
   content: "";
-  background-image: url(images/dotted.png);
+  background-image: url(/images/dotted.png);
   width: 11%;
   height: 90%;
   position: absolute;
@@ -545,16 +545,16 @@
   text-align: center;
   color: white;
   height: 200px;
-  padding-top: 10px;
+  padding: 25px;
 }
 .services .service-item img {
   height: 90px;
   width: 30%;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .services .service-item h2 {
   font-family: var(--robotoFont);
-  font-size: 1.3vw;
+  font-size: 1vw;
   text-transform: uppercase;
   margin-top: 10px;
   font-weight: bold;
@@ -562,8 +562,9 @@
 }
 .services .service-item h4 {
   font-family: var(--titilliumFont);
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-transform: capitalize;
+  margin-bottom: 0;
 }
 .services .service-item1,
 .services .service-item3 {
@@ -659,7 +660,7 @@
 }
 .footer .footer-links ul li:before {
   content: " ";
-  background-image: url(images/angle-double-right-solid.svg);
+  background-image: url(/images/angle-double-right-solid.svg);
   width: 9%;
   height: 10px;
   display: inline-block;
@@ -719,7 +720,7 @@
 
 /* Start Footer Copyright */
 .copyright span {
-  font-size: 1.2vw;
+  font-size: 1vw;
 }
 .copyright .row {
   justify-content: space-between;
