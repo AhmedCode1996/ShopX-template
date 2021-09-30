@@ -153,16 +153,13 @@
   .lower-header ul {
     text-align: center;
   }
-  .lower-header ul li {
-    width: calc(100% / 3);
-  }
 }
 @media (max-width: 500px) {
   .lower-header ul {
     text-align: center;
   }
   .lower-header ul li {
-    width: calc(100% / 2);
+    width: calc(100% / 4);
   }
 }
 /* End Header  */
@@ -212,10 +209,13 @@
   font-family: "Comfortaa", "cursive";
   text-transform: uppercase;
   font-size: 2.4vw;
+  position: relative;
 }
 .inner-banner div:nth-of-type(1) h2 sup {
   font-family: var(--robotoFont);
   font-size: 1.2vw;
+  position: absolute;
+  top: 10px;
 }
 .inner-banner div:nth-of-type(1) h4 {
   margin-top: 25px;
@@ -323,6 +323,28 @@
 }
 .products .upper-item .product-image {
   width: 300px;
+  position: relative;
+}
+.products .upper-item .product-image span {
+  display: block;
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #8fd1b6;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+.products
+  :is(.item-2 .product-image .product-status, .item-5
+    .product-image
+    .product-status) {
+  background-color: #e7a8c5;
 }
 .products .upper-item img {
   background-size: cover;
@@ -358,7 +380,6 @@
   text-transform: uppercase;
   font-size: 1vw;
   margin-left: 10px;
-  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -372,6 +393,16 @@
 }
 .products .item-basket i:hover {
   color: #abe2c5;
+}
+@media (min-width: 1400px) {
+  .products :is(.lower-item,.item-basket) {
+    padding-left: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  .products :is(.lower-item,.item-basket) {
+    margin-left: 20px;
+  }
 }
 @media (max-width: 992px) {
   .products .upper-item img {
@@ -392,9 +423,10 @@
     height: 150px;
   }
 }
-@media (max-width: 666px) {
+@media (max-width: 667px) {
   .products .lower-item {
     padding: 15px 0 20px 60px;
+    margin-left: 15px;
   }
   .products .item-basket {
     padding: 10px 0 15px 60px;
@@ -480,6 +512,7 @@
 .features .left-features {
   height: 60vh;
   position: relative;
+  padding: 20px;
 }
 .features .left-features img {
   width: 100%;
@@ -491,20 +524,19 @@
 .features .left-features .image-price {
   position: absolute;
   background-color: #e9a8c8;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0px 9px #f8f9fa7a;
-  bottom: 40px;
+  bottom: 120px;
   left: 70%;
 }
 .features .left-features .image-price span:nth-of-type(1) {
-  margin-left: 20px;
-  font-size: 12px;
+  margin-left: 30px;
+  font-size: 10px;
   text-decoration: line-through;
   margin-bottom: 0;
   font-family: "Paprika", cursive;
@@ -515,6 +547,30 @@
   color: white;
   font-family: "Paprika", cursive;
   font-weight: bold;
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .right-features img {
+    max-width: 64%;
+    top: 13%;
+    left: 32%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .right-features img {
+    max-width: 64%;
+    top: 13%;
+    left: 32%;
+  }
+}
+@media (max-width: 992px) {
+  .right-features h2 {
+    font-size: 10vw;
+  }
+  .right-features img {
+    max-width: 70%;
+    top: 10%;
+    left: 30%;
+  }
 }
 @media (max-width: 992px) {
   .left-features {
@@ -550,7 +606,6 @@
 .services .service-item img {
   height: 90px;
   width: 30%;
-  /* margin-bottom: 20px; */
 }
 .services .service-item h2 {
   font-family: var(--robotoFont);
@@ -573,6 +628,17 @@
 .services .service-item2,
 .services .service-item4 {
   background-color: #212026;
+}
+@media (max-width: 992px) {
+  .services .service-item .item-content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .services .service-item .item-content {
+    width: 45%;
+  }
 }
 /* End Services */
 
@@ -628,9 +694,10 @@
 }
 .footer .left-footer a {
   text-decoration: none;
-  font-family: "Comfortaa", cursive;
-  font-size: 1vw;
+  font-family: "Comfortaa", "cursive";
+  font-size: 12px;
   transition: 0.3s;
+  color: black;
 }
 .footer .left-footer a:hover {
   color: #abe2c5;
@@ -694,7 +761,7 @@
     margin-top: 0;
   }
   .footer .left-footer h2 {
-    text-align: center;
+    text-align: left;
   }
   .footer .left-footer h4 {
     margin-block: 40px;
@@ -707,6 +774,9 @@
 }
 @media (max-width: 768px) {
   .footer .left-footer {
+    text-align: center;
+  }
+  .footer .left-footer h2 {
     text-align: center;
   }
   .footer-links {
